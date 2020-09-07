@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/53f1f78560.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+     <div id="form_container">
+         <div class="card">
+         <div class="card-body">
+         <form action="https://mailthis.to/prajeedha@gmail.com" id="registration_form" autocomplete="off" method="POST">
+          <h1>Customer Registration Form</h1>
+          <p>Required Fields followed by <span id="required">*</span></p>
+          <fieldset id="personal_details">
+          <legend>Personal Details</legend>
+
+          <label for="fname"><i class="fa fa-user" aria-hidden="true"></i>First Name<span id="required">*</span></label>
+          <input type="text" name="fname" id="fname" required placeholder="First Name">
+          <br>
+          <label for="lname"><i class="fa fa-user" aria-hidden="true"></i>Last Name<span id="required">*</span></label>
+          <input type="text" name="lname" id="lname" required placeholder="Last Name">
+          <br>
+          <label for="gender"><i class="fas fa-venus-mars"></i>Gender</label>
+
+          <input type="radio" name="gender" id="male" value="male"/>
+         <label for="male">Male</label>
+         <input type="radio" name="gender" id="female" value="female"/>
+         <label for="">Female</label>
+         <br>
+         <label for="bday"><i class="fas fa-calendar-alt"></i>Date Of Birth<span id="required">*</span></label>
+         <input type="date" name="bday" id="bday" required>
+        </fieldset> 
+    
+        <fieldset id="account_details">
+         <legend>Account Details</legend>
+          <label for="email"><i class="fas fa-envelope"></i>Email<span id="required">*</span></label>
+         <input type="email" name="email" id="email" required placeholder="Enter Email">
+         <br>
+         <label for="username"><i class="fas fa-user-circle"></i>User name<span id="required">*</span></label>
+         <input type="text" name="username" id="username" required>
+         <br>
+         <label for="password"><i class="fas fa-key"></i>Password<span id="required">*</span></label>
+         <input type="password" name="password" id="password" required placeholder="Password" minlength="8"> <i class="fas fa-eye" onClick=showPassword(this)></i>
+         
+
+         <br>
+        <label for="confirmpassword"><i class="fas fa-check-circle"></i>Confirm Password<span id="required">*</span></label>
+         <input type="password" name="confirmpassword" id="confirmpassword" required placeholder="Password" onblur="comparePassword()" minlength="8">
+         <div id="password_confirmation" class="alert"></div> 
+        </fieldset> 
+      
+
+        <fieldset id="submit">
+
+        <input type="checkbox" name="terms_conditions" id="terms_conditions" required>
+        <label for="terms_conditions">I have read and understood the <a href="">terms and conditions</a><span id="required">*</span></label>
+        <br>
+        <input type="checkbox" name="promo" id="promo" >
+        <label for="promo">I'd like to recieve coupons,promotions,surveys and updates via email about Tech Info.</label>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up ! </button>
+
+         </fieldset>
+         </form>
+     </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
